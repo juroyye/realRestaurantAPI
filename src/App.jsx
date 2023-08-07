@@ -1,14 +1,14 @@
 import './App.css'
-// import bgVideo from '../src/foodVid.mp4'
+import bgVideo from '../src/foodVid.mp4'
 
 
 function App() {
 
   return (
     <>
-    {/* <video className='bgVid' autoPlay loop muted>
+    <video className='bgVid' autoPlay loop muted>
       <source src={bgVideo} type='video/mp4' />
-    </video> */}
+    </video>
   
 
 
