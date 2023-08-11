@@ -17,6 +17,7 @@ MUST USE FETCH AND USEEFFECT.
 First, I need to create the input boxes and submit buttons for my page.
 Next, I need to center them on my page. (I styled them too.)
 Next I need to put the placeholder lettering inside the submit containers.
+I've begun implenting the location and restaurant list APIs and begun to make calls. 
 
 https://clipchamp.com/watch/QQXSu4jTNpv
 
