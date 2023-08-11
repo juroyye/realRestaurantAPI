@@ -48,17 +48,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // }
 
 
-// class ExampleComponent extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { };
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <h1>This is a view created by a class component</h1>
-//       </div>
-//     );
-//   }
-// }
