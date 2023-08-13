@@ -104,5 +104,5 @@ input{
 .restaurantBox{
     flex: content;
     border: dotted white;
-    padding: 2px 2px 2px 0px;
+    padding: 1%;
 }

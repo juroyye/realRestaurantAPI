@@ -51,8 +51,9 @@ function App() {
           <p>Cuisine: {restaurant.servesCuisine}</p>
           <p>City: {restaurant.address.locality}</p>
           <p>Address: {restaurant.address.street}</p>
-          <img src='{restaurant.mainPhoto}'></img>
-          </ul></div>
+          <img width={400} src={restaurant.mainPhotoSrc} />
+          </ul>
+          </div>
          
         ))}
       </ul>
