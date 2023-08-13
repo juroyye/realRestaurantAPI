@@ -6,23 +6,28 @@ import './index.css'
 
 
 function App() {
-
-const [apiData, setApiData] = useState([]);
-
-
-useEffect(() => { 
-  // fetches the location data and console logs data
-fetch('https://the-fork-the-spoon.p.rapidapi.com/locations/v2/list?google_place_id=ChIJu46S-ZZhLxMROG5lkwZ3D7k&geo_ref=false&geo_text=Roma%2C%20Metropolitan%20City%20of%20Rome%2C%20Italy&geo_type=locality')
-.then(response => response.json())
-.then(data => {
-  if (Array.isArray(data)) {
-  setApiData(data);
-} else {
-  console.error('API response is not an array:', data);
-}
-})
-.catch(error => console.error('Error fetching data:', error));
-}, []);
+  const [restaurants, setRestaurants] = useState([]);
+  useEffect(() => {
+    // Fetch data from the API
+    fetch('https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=348156&pageSize=10&pageNumber=1', {
+      method: "GET",
+      headers: {
+        'X-RapidAPI-Host': 'the-fork-the-spoon.p.rapidapi.com',
+        'X-RapidAPI-Key': 'bae3154e6amsh9de0e73ebe298f8p1def95jsn1394f149f348',
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw Error(`error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      setRestaurants(data.data); 
+    })
+    .catch(error => console.error('Error fetching data:', error));
+  }, []);
 
   return (
     <>
@@ -39,17 +44,15 @@ fetch('https://the-fork-the-spoon.p.rapidapi.com/locations/v2/list?google_place_
      <button className='submit'>Submit</button>
 
 <div className='resultsBox'>
-  <ul>
-    {apiData.map(item => (
-      <li key={item.id}>{item.name}</li>
-    ))}
-  </ul>
+<ul>
+        {restaurants.map((restaurant, index) => (
+          <li key={index}>{restaurant.name}</li>
+        ))}
+      </ul>
 </div>
-
     </>
   )
 }
-
 
 
 export default App;
