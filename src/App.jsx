@@ -46,11 +46,14 @@ function App() {
 <div className='resultsBox'>
 <ul>
         {restaurants.map((restaurant, index) => (
-          <li key={index}>{restaurant.name}
+          <div className='restaurantBox'> 
+          <ul key={index}>{restaurant.name}
           <p>Cuisine: {restaurant.servesCuisine}</p>
           <p>City: {restaurant.address.locality}</p>
+          <p>Address: {restaurant.address.street}</p>
           <img src='{restaurant.mainPhoto}'></img>
-          </li>
+          </ul></div>
+         
         ))}
       </ul>
 </div>

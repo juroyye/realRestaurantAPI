@@ -84,7 +84,7 @@ input{
 .resultsBox{
     /* visibility: hidden; */
     color: antiquewhite;
-    display: flexbox;
+    display: grid;
     border-radius: 5px;
     border: 2px solid gray;
     position: absolute;
@@ -97,4 +97,12 @@ input{
     gap: 10px;
     background-color: black;
     opacity: 65%;
+    align-items: center;
+    overflow: auto;
+}
+
+.restaurantBox{
+    flex: content;
+    border: dotted white;
+    padding: 2px 2px 2px 0px;
 }
