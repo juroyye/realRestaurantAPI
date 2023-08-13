@@ -9,6 +9,7 @@ input{
 }
 
 .fields{
+    visibility: hidden;
     border-radius: 5px;
     border: 2px solid gray;
     padding: 100px 25px 100px 25px;
@@ -41,6 +42,7 @@ input{
 }
 
 .submit{
+    visibility: hidden;
     border: solid 1px white;
     color: rgb(204, 204, 204);
     position: absolute;
@@ -61,6 +63,7 @@ input{
 }
 
 .title{
+    visibility: hidden;
     color: rgb(255, 255, 255);
     font-size: 2.5rem;
     position: absolute;
@@ -79,6 +82,8 @@ input{
 }
 
 .resultsBox{
+    /* visibility: hidden; */
+    color: antiquewhite;
     display: flexbox;
     border-radius: 5px;
     border: 2px solid gray;
