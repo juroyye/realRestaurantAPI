@@ -96,13 +96,13 @@ input{
     height: 80%;
     gap: 10px;
     background-color: black;
-    opacity: 65%;
+    opacity: 85%;
     align-items: center;
     overflow: auto;
 }
 
 .restaurantBox{
-    flex: content;
+    flex: grid;
     border: dotted white;
     padding: 1%;
 }
