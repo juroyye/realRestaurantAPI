@@ -71,3 +71,62 @@ Order of Languages - Amharic, Korean, Arabic
 // .catch(err => {
 //   console.log(err);
 // });
+
+
+
+
+
+
+function App() {
+  const [restaurants, setRestaurants] = useState([]);
+  const [city, setCity] = useState('');
+  const [keywords, setKeywords] =useState('');
+
+  useEffect(() => {
+
+    // Fetch data from the API
+    fetch('https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=348156&pageSize=10&pageNumber=1', {
+      method: "GET",
+      headers: {
+        'X-RapidAPI-Host': 'the-fork-the-spoon.p.rapidapi.com',
+        'X-RapidAPI-Key': 'bae3154e6amsh9de0e73ebe298f8p1def95jsn1394f149f348',
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw Error(`error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      setRestaurants(data.data); 
+    })
+    .catch(error => console.error('Error fetching data:', error));
+  }, [city, keywords]);
+
+
+
+
+
+ <video className='bgVid' autoPlay loop muted>
+      <source src={bgVideo} type='video/mp4' />
+    </video>
+
+
+
+    <div className='resultsBox'>
+<ul>
+        {restaurants.map((restaurant, index) => (
+          <div className='restaurantBox'> 
+          <ul key={index}>{restaurant.name}
+          <p>Cuisine: {restaurant.servesCuisine}</p>
+          <p>City: {restaurant.address.locality}</p>
+          <p>Address: {restaurant.address.street}</p>
+          <img width={400} src={restaurant.mainPhotoSrc} />
+          </ul>
+          </div>
+         
+        ))}
+      </ul>
+</div>

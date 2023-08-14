@@ -9,13 +9,13 @@ input{
 }
 
 .fields{
-    visibility: hidden;
+    /* visibility: hidden; */
     border-radius: 5px;
     border: 2px solid gray;
     padding: 100px 25px 100px 25px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%, -50%);
     display:grid;
     width: 400px;
@@ -42,12 +42,12 @@ input{
 }
 
 .submit{
-    visibility: hidden;
+    /* visibility: hidden; */
     border: solid 1px white;
     color: rgb(204, 204, 204);
     position: absolute;
     border-radius: 5px;
-    top: 62%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
@@ -63,13 +63,13 @@ input{
 }
 
 .title{
-    visibility: hidden;
+    /* visibility: hidden; */
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: absolute;
-    top: 33%; 
-    left: 50%;
-     transform: translate(-50%, -50%);  
+    top: 8%; 
+    left: 34%;
+     transform: translate(-20%, -45%);  
 }
 
 .bgVid{
@@ -89,10 +89,10 @@ input{
     border: 2px solid gray;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     display:grid;
-    width: 85%;
+    width: 50%;
     height: 80%;
     gap: 10px;
     background-color: black;
